@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 1</title>
+
+	<script type="text/javascript">
+		function change () {
+			p = document.getElementById("image1");
+			p.style.border="solid 3px red";
+		}
+
+		function noBorder () {
+			p = document.getElementById("image1");
+			p.style.border="none";
+		}
+	</script>
+
+  </head>
+  <body>
+      <img src="image1.jpg" id="image1" onmouseover="change();" onmouseout="noBorder();" />
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Histoire</title>
+	<script type="text/javascript">
+		var a = parseInt(prompt("Combien de phrases est-ce que vous voulez entrer?"));
+		var n = 0;
+		var array = new Array();
+		var arrayRand = new Array();
+		var i =0;
+
+		while (n<a) {
+			arrayRand[n]=true;
+			n++;
+			array.push(prompt("Ajoute une phrase (Phrase " + n + " de " + a + ")"));
+		}
+
+		while (i<a) {
+			var random = Math.floor(Math.random()*a);
+			if (arrayRand[random]) {
+				arrayRand[random]=false;
+				document.write(array[random]+"<br>");
+				i++;
+			}
+		}
+
+		
+	</script>
+</head>
+<body>
+</body>
+</html>

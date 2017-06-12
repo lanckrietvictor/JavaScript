@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Higher/Lower</title>
+	<script type="text/javascript">
+		function higher () {
+			var random = Math.floor(Math.random()*(100+1));
+			var answer = prompt("Guess the number between 0 and 100");
+			var continuer = true;
+			var i=0;
+			while (continuer) {
+				i++;
+
+				if (i==10) {
+					alert("You got your 10 tries, game over!")
+					continuer=false;
+				}
+
+				else if (answer<random) {
+					answer=prompt("The number is higher than " + answer +"\n"+"Try again, higher"+"\n"+"You've tried "+i+" out of 10 times");
+				}
+				else if (answer>random) {
+					answer=prompt("The number is lower than " + answer +"\n"+"Try again, lower"+"\n"+"You've tried "+i+" out of 10 times");
+				}
+				else if (answer==random) {
+					alert("Woooooo, you win! The number was "+random);
+					continuer=false;
+				}
+
+				else {
+					answer=prompt("I don't think you entered a whole number, please try entering a number between 0 and 100"+"\n"+"We will not count this as a try");
+						i--;					
+				}
+			}
+		}
+
+		/*alert(random);*/
+	</script>
+</head>
+<body>
+	<button onclick="higher();">Let's play!</button>
+</body>
+</html>

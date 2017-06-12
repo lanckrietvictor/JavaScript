@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 1</title>
+    <script type="text/javascript">
+    	function img1 () {
+    		p = document.getElementById("image1");
+        console.log(p);
+			  p.setAttribute("src", "image2.jpg");
+    	}
+
+    	function img2 () {
+    		p = document.getElementById("image1");
+			  p.setAttribute("src", "image1.jpg");
+    	}
+    </script>
+  </head>
+  <body>
+      <img src="image1.jpg" id="image1" onmouseover="img2();" onmouseout="img1();" />
+  </body>
+</html>

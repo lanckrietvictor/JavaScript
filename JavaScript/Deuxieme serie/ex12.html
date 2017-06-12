@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ex12</title>
+	<script type="text/javascript">
+
+		function trigger () {
+
+			var day = 0;
+
+			var a = parseInt(prompt("0. Fin du programme \n"+
+				"1. De Celsius vers Fahrenheit \n"+
+				"2. De Celsius vers Kelvin \n"+
+				"3. De Fahrenheit vers Celsius \n"+
+				"4. De Fahrenheit vers Kelvin \n"+
+				"5. De Kelvin vers Celsius \n"+
+				"6. De Kelvin vers Fahrenheit"));
+
+
+			switch (a) {
+				case 0:
+				break;
+
+				case 1:
+				var temperature = parseFloat((prompt("Quelle est la temperature en Celsius?")));
+				temperature = (temperature*(9/5))+32;
+				day = "Il fait "+temperature+"° Fahrenheit."
+				break;
+
+				case 2:
+				var temperature = parseFloat((prompt("Quelle est la temperature en Celsius?")));
+				temperature = temperature+273.15;
+				day = "Il fait "+temperature+"° Kelvin";
+				break;
+
+				case 3:
+				var temperature = parseFloat((prompt("Quelle est la temperature en Fahrenheit?")));
+				temperature = (temperature-32)/(9/5);
+				day = "Il fait "+temperature+"° Celsius";
+				break;
+
+				case 4:
+				var temperature = parseFloat((prompt("Quelle est la temperature en Fahrenheit?")));
+				temperature = ((temperature-32)*(5/9))+273.15;
+				day = "Il fait "+temperature+"° Kelvin";		
+				break;
+
+				case 5:
+				var temperature = parseFloat((prompt("Quelle est la temperature en Kelvin?")));
+				temperature = temperature-273.15;
+				day = "Il fait "+temperature+"° Celsius";		
+				break;
+
+				case 6:
+				var temperature = parseFloat((prompt("Quelle est la temperature en Kelvin?")));
+				temperature = (temperature*(9/5))-459.67;
+				day = "Il fait "+temperature+"° Fahrenheit";			}
+
+				alert(day);
+
+			}
+
+
+
+
+		</script>
+	</head>
+	<body>
+		<button onclick="trigger();">Valider</button>
+	</body>
+	</html>

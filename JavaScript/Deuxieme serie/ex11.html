@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ex11</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function calculMoyenne() {
+			
+			var input = 0;
+			var counter = 0;
+			var total = 0;
+			var average = 0;
+			var continuer = true;
+
+			while (continuer) {
+
+				input = parseInt(prompt("Entre un nombre entier"));
+
+				while (isNaN(input)) {
+					alert("Erreur: Vous avez pas entrer un nombre");
+					input = parseInt(prompt("Entre un nombre entier"));
+				}
+
+				if (input>=0) {
+					total = total + input;
+					counter++;
+				}
+
+				else {
+					console.log("test");
+					average=(total/counter);
+					continuer = false;
+				}
+			}
+
+			
+
+			alert(average);
+		}
+
+	</script>
+</head>
+<body>
+	<button onclick="calculMoyenne();">Valider</button>
+</body>
+</html>

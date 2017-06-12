@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 3</title>
+
+	<script type="text/javascript">
+		function value () {
+			var p = document.getElementById("nom");
+			alert(p.value);
+		}
+	</script>	
+
+</head>
+<body onkeyup="value();">
+  <form>
+    <label for="nom">Votre nom  : </label><input type="text" name="nom" value="Cette boite ouvrira chaque fois tu appuie sur le clavier" id="nom" />
+  </form>
+</body>
+</html>

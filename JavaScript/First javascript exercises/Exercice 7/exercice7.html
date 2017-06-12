@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercice_7</title>
+    <meta charset="UTF-8">
+
+    <script type="text/javascript">
+        function exercice7() {
+            console.log("test");
+            var shoesize =parseInt(document.getElementById("pointure").value);
+            var year = parseInt(document.getElementById("annee").value);
+
+            var total = 0;
+            total = shoesize*2;
+            total = total+5;
+            total = total*50;
+            total = total-year;
+            total = total+1766;
+            alert(shoesize+year);
+        }
+
+        
+    </script>
+</head>
+<body>
+    <form>
+        <label for="pointure">Pointure : </label><input type="text" id="pointure" name="pointure"/><br/>
+        <label for="annee">Année de naissance : </label><input type="text" id="annee" name="annee"/><br/>
+        <button id="valider" name="valider" onclick="exercice7();">Valider</button>
+    </form>
+</body>
+</html>

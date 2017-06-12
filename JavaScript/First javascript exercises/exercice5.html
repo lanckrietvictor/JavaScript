@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercice_5</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        function exercice5() {
+            console.log("test");
+            var number1 = parseInt(document.getElementById("premier_nombre").value);
+            var number2 = parseFloat(document.getElementById("deuxieme_nombre").value);
+
+            Math.round(number1);
+            total = number1*number2;
+            alert(number1 + " * " + number2 + " = " + total);
+        }
+    </script>
+
+</head>
+<body>
+    <form>
+        <label for="premier_nombre">Premier nombre : </label><input type="text" id="premier_nombre" name="premier_nombre"/><br/>
+        <label for="deuxieme_nombre">Deuxième nombre : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre"/><br/>
+        <button  id="valider" name ="valider" onclick="exercice5();">Valider</button>
+    </form>
+</body>
+</html>

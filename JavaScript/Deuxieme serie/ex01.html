@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ex01</title>
+	<script type="text/javascript">
+		function surface() {
+			console.log("test");
+			var a = prompt("Quelle est la largeur du rectangle?");
+			var b = prompt("Quelle est la longeur du rectangle?");
+			var surface = a*b;
+			alert("La surface du rectangle est "+surface+" cm².")
+		}
+
+		function perimeter() {
+			console.log("test");
+			var a = prompt("Quelle est la largeur du rectangle?");
+			var b = prompt("Quelle est la longeur du rectangle?");
+			var perimeter = 2*a+2*b;
+			alert("La périmètre du rectangle est "+perimeter+".")
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<button type="button" onclick="surface();">Calculer la surface d'un rectangle</button>
+		<button type="button" onclick="perimeter();">Calculer le périmètre d'un rectangle</button>
+	</form>
+
+</body>
+</html>

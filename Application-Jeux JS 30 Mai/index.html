@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Application Pierre Papier Ciseaux</title>
+</head>
+
+<script type="text/javascript">
+	function startGame () {
+		var random = Math.floor(Math.random()*(2+1));
+		var array=["pierre", "papier", "ciseaux"];
+		var choixOrdinatuer = array[random];
+		console.log("L'ordinateur a choisi "+choixOrdinatuer);
+
+		var choixJoueur = prompt("Choisissez pierre, papier ou ciseaux.");
+		console.log("Vous avez choisi "+choixJoueur);
+
+		if (choixJoueur==="ciseaux"&&choixOrdinatuer==="papier") {
+			console.log("Vous avez gagnez!")
+		}
+
+		else if (choixJoueur==="papier"&&choixOrdinatuer==="ciseaux") {
+			console.log("Vous avez perdu. :(")
+		}
+
+		else if (choixJoueur==="papier"&&choixOrdinatuer==="pierre") {
+			console.log("Vous avez gagnez!");
+		}
+
+		else if (choixJoueur==="pierre"&&choixOrdinatuer==="papier") {
+			console.log("Vous avez perdu. :(");
+		}
+
+		else if (choixJoueur==="pierre"&&choixOrdinatuer==="ciseaux") {
+			console.log("Vous avez gagnez!");
+		}
+
+		else if (choixJoueur==="ciseaux"&&choixOrdinatuer==="pierre") {
+			console.log("Vous avez perdu. :(");
+		}
+
+		else if (choixOrdinatuer===choixJoueur) {
+			console.log("Vous êtes à égalité.")
+		}
+
+		else {
+			console.log("Je pense que votre choix n'était pas dans les possibilités.")
+		}
+	}
+
+</script>
+
+<body>
+	<button onclick="startGame();">Joue Pierre Papier Ciseaux</button>
+</body>
+</html>

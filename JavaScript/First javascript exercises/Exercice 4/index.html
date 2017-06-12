@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_4</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript">
+        function exercice4(){
+            console.log("test");
+            var lastname = document.getElementById("nom").value;
+            var firstname = document.getElementById("prenom").value;
+            var city = document.getElementById("ville").value;
+
+            alert("Nom: "+lastname + "\n"
+            +"Prénom: "+ firstname + "\n" 
+            +"Ville: "+city);
+        }
+            
+        </script>
+    </head>
+    <body>
+        <form>
+            <label for="nom">Nom : </label><input type="text" name="nom" id="nom"/>
+            <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom"/>
+            <label for="ville">Ville : </label><input type="text" name="ville" id="ville"/>
+            <button  name="valider" onclick="exercice4();" id="valider">Valider</button>
+        </form>
+    </body>
+</html>
