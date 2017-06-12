@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Twitter</title>
+</head>
+<body>
+	<canvas id="my_canvas" width="350" height="350" style="border: solid 1px black">
+	</canvas>
+</body>
+
+<script>
+	var c = document.getElementById("my_canvas");
+	var ctx = c.getContext("2d");
+
+	/*Twitter*/
+
+	ctx.lineWidth = 5;
+	ctx.lineCap = "round";
+	ctx.lineJoin = "round";
+	ctx.strokeStyle = "#4099FF";
+
+	ctx.beginPath();
+	ctx.arc(250, 70, 50, Math.PI, 1.75*Math.PI);
+	ctx.stroke();							//skull
+
+
+	ctx.beginPath();
+	ctx.moveTo(285, 35);
+	ctx.lineTo(310, 20);
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(310, 20);
+	ctx.quadraticCurveTo(310, 40, 290, 60);
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(290, 60);
+	ctx.lineTo(320, 35);
+	ctx.stroke();
+	ctx.moveTo(320, 35);
+	ctx.quadraticCurveTo(320, 55, 295, 80);
+	ctx.stroke();							//beak
+
+	ctx.beginPath();
+	ctx.arc(201, 113, 100, 1.9*Math.PI, 0.75*Math.PI);
+	ctx.stroke();							//chest
+
+	ctx.beginPath();
+	ctx.moveTo(130, 182);
+	ctx.lineTo(185, 170);
+	ctx.stroke();
+	ctx.moveTo(185, 170);
+	ctx.quadraticCurveTo(130, 170, 130, 140);
+	ctx.stroke();
+
+
+</script>
+</html>

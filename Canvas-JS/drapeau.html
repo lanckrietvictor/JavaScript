@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drapeau</title>
+</head>
+<body>
+	<canvas id="my_canvas" width="350" height="350" style="border:solid 1px black">
+	Blabla
+	</canvas>
+
+	<script type="text/javascript">
+		var c = document.getElementById("my_canvas");
+		var context = c.getContext("2d");
+
+		/*Drapeau*/
+
+		/*Gazon*/
+		context.fillStyle = "green";
+		context.fillRect(0, 300, 350, 50);
+
+		/*Mât, centré en milieu*/
+		
+		context.fillStyle = "gray";
+		context.fillRect(173, 50, 4, 300);
+
+		/*Partie noire du drapeau*/
+		context.fillStyle = "black";
+		context.fillRect(177, 50, 30, 50);
+		
+
+		/*Partie jaune du drapeau*/
+		
+		context.fillStyle = "yellow";
+		context.fillRect(207, 50, 30, 50);
+
+		/*Partie rouge du drapeau*/
+		context.fillStyle = "red";
+		context.fillRect(237, 50, 30, 50);
+	</script>
+</body>
+</html>

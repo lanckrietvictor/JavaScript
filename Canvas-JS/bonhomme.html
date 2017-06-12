@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Maison</title>
+</head>
+<body>
+	<canvas id="my_canvas" width="350" height="350" style="border: solid 1px black">
+	</canvas>
+
+	<script type="text/javascript">
+		var c = document.getElementById("my_canvas");
+		var ctx = c.getContext("2d");
+
+		/*bonhomme*/
+
+		ctx.beginPath();
+		ctx.rect(175, 175, 100, 100);
+		ctx.closePath();
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.moveTo(175, 175);
+		ctx.lineTo(275, 275);
+		ctx.closePath();
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.arc(275, 175, 100, 0, 2*Math.PI);
+		ctx.closePath();
+		ctx.stroke();
+
+
+	</script>
+</body>
+</html>

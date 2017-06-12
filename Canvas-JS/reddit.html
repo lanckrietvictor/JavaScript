@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reddit</title>
+</head>
+<body>
+	<canvas id="my_canvas" width="350" height="350" style="border: solid 1px black">
+	</canvas>
+</body>
+
+<script>
+	var c = document.getElementById("my_canvas");
+	var ctx = c.getContext("2d");
+
+	/*Reddit*/
+
+	ctx.lineJoin = "round";
+	ctx.lineCap = "round";
+
+	ctx.beginPath();
+	ctx.ellipse(135, 260, 30, 45, 0, 0, 2*Math.PI);
+	ctx.lineWidth = 5;
+	ctx.stroke();							//left arm
+
+	ctx.beginPath();
+	ctx.ellipse(215, 260, 30, 45, 0, 0, 2*Math.PI);
+	ctx.lineWidth = 5;
+	ctx.stroke();							//right arm
+
+	ctx.beginPath();
+	ctx.arc(135, 348, 25, 1*Math.PI, 2*Math.PI);
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(110, 348);
+	ctx.lineTo(160, 348);
+	ctx.stroke();							//left foot
+
+	ctx.beginPath();
+	ctx.arc(215, 348, 25, 1*Math.PI, 2*Math.PI);
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.moveTo(190, 348);
+	ctx.lineTo(240, 348);
+	ctx.stroke();							//left foot
+
+	ctx.beginPath();
+	ctx.ellipse(175, 270, 50, 80, 0, 0, 2*Math.PI);
+	ctx.lineWidth = 10;
+	ctx.stroke();
+	ctx.fillStyle = "white";
+	ctx.fill();								//body
+
+
+
+
+	/*head*/
+
+	ctx.beginPath();
+	ctx.arc(110, 145, 20, 0, 2*Math.PI);
+	ctx.lineWidth = 5;
+	ctx.stroke();								//left ear
+
+	ctx.beginPath();
+	ctx.arc(240, 145, 20, 0, 2*Math.PI);
+	ctx.lineWidth = 5;
+	ctx.stroke();								//right ear
+
+	ctx.beginPath();
+	ctx.moveTo(175, 120);
+	ctx.lineTo(190, 80);
+	ctx.lineTo(230, 90);
+	ctx.stroke();								//antenna
+
+	ctx.beginPath();
+	ctx.arc(230, 90, 15, 0, 2*Math.PI);
+	ctx.fillStyle = "white";
+	ctx.fill();
+	ctx.stroke();								//ball on 												antenna
+
+	ctx.beginPath();
+	ctx.ellipse(175, 170, 75, 50, 0, 0, 2 * Math.PI);
+	ctx.lineWidth = 10;
+	ctx.stroke();
+	ctx.fill();									//head
+
+	ctx.beginPath();
+	ctx.arc(150, 160, 10, 0, 2*Math.PI);
+	ctx.fillStyle = "#FF5700";
+	ctx.fill();									//left eye
+
+	ctx.beginPath();
+	ctx.arc(200, 160, 10, 0, 2*Math.PI);
+	ctx.fillStyle = "#FF5700";
+	ctx.fill();									//right eye
+
+	ctx.beginPath();
+	ctx.arc(175, 170, 30, 0.25*Math.PI, 0.75*Math.PI);
+	ctx.lineWidth = 5;
+	ctx.stroke();								//smile
+
+	
+
+</script>
+</html>

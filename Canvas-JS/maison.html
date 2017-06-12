@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Maison</title>
+</head>
+<body>
+	<canvas id="my_canvas" width="350" height="350" style="border: solid 1px black">
+	</canvas>
+
+	<script type="text/javascript">
+		var c = document.getElementById("my_canvas");
+		var ctx = c.getContext("2d");
+
+		/*Maison*/
+
+		/*Couleur*/
+
+		ctx.fillStyle = "#96D797"
+		ctx.fillRect(20, 50, 300, 90);	//Toit principale
+
+		ctx.beginPath();
+		ctx.moveTo(20, 140);
+		ctx.lineTo(110, 60);
+		ctx.lineTo(200, 140);
+		ctx.lineTo(20, 140);
+		ctx.closePath();
+		ctx.fillStyle = "#ECEB99";
+		ctx.fill();						//Face du toit
+
+		ctx.fillStyle = "#DCA4A7";
+		ctx.fillRect(200, 65, 40, 60);
+		ctx.fillRect(195, 50, 50, 15);	//Cheminée
+
+		ctx.fillStyle = "#D2D0FF";
+		ctx.fillRect(50, 160, 40, 60);
+		ctx.fillRect(130, 160, 40, 60);	//Les fenêtres
+
+		ctx.fillStyle = "#B16F4C";
+		ctx.fillRect(20, 280, 205, 20);
+		ctx.fillRect(295, 280, 25, 20);	//La fondation
+
+		ctx.fillStyle = "#B6B5A3";
+		ctx.fillRect(230, 200, 60, 100);
+		ctx.fillRect(225, 195, 70, 105); //La porte
+
+
+		
+
+
+		/*Contour*/
+		ctx.rect(20, 50, 300, 250);	//Rectangle principal
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.moveTo(200, 140);
+		ctx.lineTo(200, 300);
+		ctx.closePath();
+		ctx.stroke();				//Division vertical 
+
+		ctx.beginPath();
+		ctx.moveTo(20, 130)
+		ctx.lineTo(110, 50);
+		ctx.lineTo(200, 130);
+		ctx.lineTo(200, 140);
+		ctx.lineTo(110, 60);
+		ctx.lineTo(20, 140);
+		ctx.lineTo(20, 130);
+		ctx.closePath();
+		ctx.stroke();				//Contour du toit
+
+		ctx.beginPath();
+		ctx.moveTo(200, 140);
+		ctx.lineTo(320, 140);
+		ctx.closePath();
+		ctx.stroke();				//Ligne au dessus la porte
+
+		ctx.rect(230, 200, 60, 100);
+		ctx.rect(225, 195, 70, 105);
+		ctx.stroke();				//Contour de la porte
+
+
+		ctx.rect(50, 160, 40, 60);				
+		ctx.rect(45, 155, 50, 70)	
+		ctx.stroke();				//Fenêtre gauche
+
+		ctx.rect(130, 160, 40, 60);
+		ctx.rect(125, 155, 50, 70);
+		ctx.strokeStyle = "black";
+		ctx.stroke();				//Fenêtre droite
+
+		ctx.beginPath();
+		ctx.moveTo(20, 280);
+		ctx.lineTo(225, 280);
+		ctx.closePath();
+		ctx.stroke();
+		ctx.beginPath();
+		ctx.moveTo(295, 280);
+		ctx.lineTo(320, 280);
+		ctx.closePath();
+		ctx.stroke();				//Fondation
+
+		ctx.rect(200, 65, 40, 60);
+		ctx.stroke();
+		ctx.rect(195, 50, 50, 15);
+		ctx.stroke();				//Cheminée
+
+
+
+
+
+	</script>
+</body>
+</html>

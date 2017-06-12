@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Android</title>
+</head>
+<body>
+	<canvas id="my_canvas" width="350" height="350" style="border: solid 1px black">
+	</canvas>
+
+	<script type="text/javascript">
+		var c = document.getElementById("my_canvas");
+		var ctx = c.getContext("2d");
+
+		/*android*/
+
+		ctx.beginPath();
+		ctx.arc(175, 90, 50, Math.PI, 0);
+		ctx.closePath();
+		ctx.fillStyle = "#A5CA3A";
+		ctx.fill();							//Contour tête
+
+		ctx.beginPath();
+		ctx.arc(150, 70, 5, 0, 2*Math.PI);
+		ctx.closePath();
+		ctx.fillStyle = "white";
+		ctx.fill();							//oeil gauche
+
+		ctx.beginPath();
+		ctx.arc(200, 70, 5, 0, 2*Math.PI);
+		ctx.closePath();
+		ctx.fillStyle = "white";
+		ctx.fill();							//oeil droit
+
+		ctx.beginPath();
+		ctx.moveTo(147, 50);
+		ctx.lineTo(137, 30);
+		ctx.strokeStyle = "#A5CA3A";
+		ctx.lineWidth = 3;
+		ctx.lineCap = "round";
+		ctx.stroke();						//antenne gauche
+
+		ctx.beginPath();
+		ctx.moveTo(203, 50);
+		ctx.lineTo(213, 30);
+		ctx.closePath();
+		ctx.strokeStyle = "#A5CA3A";
+		ctx.lineWidth = 3;
+		ctx.lineCap = "round";
+		ctx.stroke();						//antenne gauche
+
+		ctx.beginPath();
+		ctx.moveTo(125, 95);
+		ctx.lineTo(125, 190);
+		ctx.lineTo(135, 200);
+		ctx.lineTo(215, 200);
+		ctx.lineTo(225, 190);
+		ctx.lineTo(225, 95);
+		ctx.lineTo(125, 95);
+		ctx.closePath();
+		ctx.fillStyle = "#A5CA3A";
+		ctx.fill();							//Corps
+
+		ctx.beginPath();
+		ctx.arc(135, 190, 10, 0, 2*Math.PI);
+		ctx.closePath();
+		ctx.fillStyle = "#A5CA3A";
+		ctx.fill();							//Coin gauche
+
+		ctx.beginPath();
+		ctx.arc(215, 190, 10, 0, 2*Math.PI);
+		ctx.closePath();
+		ctx.fillStyle = "#A5CA3A";
+		ctx.fill();							//Coin droit
+
+		ctx.beginPath();
+		ctx.moveTo(105, 105);
+		ctx.lineTo(105, 170);
+		ctx.strokeStyle = "#A5CA3A";
+		ctx.lineWidth = 25;
+		ctx.lineCap = "round";
+		ctx.stroke();						//Bras gauche
+
+		ctx.beginPath();
+		ctx.moveTo(245, 105);
+		ctx.lineTo(245, 170);
+		ctx.strokeStyle = "#A5CA3A";
+		ctx.lineWidth = 25;
+		ctx.lineCap = "round";
+		ctx.stroke();						//Bras droit
+
+		ctx.beginPath();
+		ctx.moveTo(155, 190);
+		ctx.lineTo(155, 220);
+		ctx.strokeStyle = "#A5CA3A";
+		ctx.lineWidth = 25;
+		ctx.lineCap = "round";
+		ctx.stroke();						//Pied gauche
+
+		ctx.beginPath();
+		ctx.moveTo(195, 190);
+		ctx.lineTo(195, 220);
+		ctx.strokeStyle = "#A5CA3A";
+		ctx.lineWidth = 25;
+		ctx.lineCap = "round";
+		ctx.stroke();						//Pied droit
+
+
+
+
+		
+
+	</script>
+</body>
+</html>
